@@ -3,29 +3,26 @@ import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
 
+// This function is already async since we await getBlogPosts()
 export async function generateStaticParams() {
-  let posts = getBlogPosts()
+  let posts = await getBlogPosts()
 
   return posts.map((post) => ({
     slug: post.slug,
   }))
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+// Mark generateMetadata as async so we can await data and safely use params.slug
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
+  const posts = await getBlogPosts() // Await the posts if getBlogPosts returns a promise
+  const post = posts.find((post) => post.slug === params.slug)
   if (!post) {
-    return
+    return {}
   }
 
-  let {
-    title,
-    publishedAt: publishedTime,
-    summary: description,
-    image,
-  } = post.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  const { title, publishedAt: publishedTime, summary: description, image } = post.metadata
+  const ogImage = image ? image : `${baseUrl}/og?title=${encodeURIComponent(title)}`
 
   return {
     title,
@@ -51,8 +48,11 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+// Mark the page component as async so that we can await asynchronous data fetching
+export default async function Blog(props: { params: Promise<{ slug: string }> }) {
+  const params = await props.params;
+  const posts = await getBlogPosts() // Await the posts if getBlogPosts is async
+  const post = posts.find((post) => post.slug === params.slug)
 
   if (!post) {
     notFound()

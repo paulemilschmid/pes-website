@@ -1,3 +1,4 @@
+import CV from 'app/cv/page'
 import Link from 'next/link'
 
 const navItems = {
@@ -6,10 +7,10 @@ const navItems = {
   },
   '/blog': {
     name: 'blog',
-  },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-    name: 'deploy',
-  },
+  }, 
+  '/cv': {
+    name: 'cv'
+  }
 }
 
 export function Navbar() {

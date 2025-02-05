@@ -66,25 +66,23 @@ function slugify(str) {
 
 function createHeading(level) {
   const Heading = ({ children }) => {
-    let slug = slugify(children)
-    return React.createElement(
-      `h${level}`,
-      { id: slug },
-      [
-        React.createElement('a', {
-          href: `#${slug}`,
-          key: `link-${slug}`,
-          className: 'anchor',
-        }),
-      ],
-      children
-    )
-  }
-
-  Heading.displayName = `Heading${level}`
-
-  return Heading
+    const slug = slugify(children);
+    return (
+      React.createElement(
+        `h${level}`,
+        { id: slug },
+        <>
+          <a href={`#${slug}`} className="anchor" key={`link-${slug}`} />
+          {children}
+        </>
+      )
+    );
+  };
+  Heading.displayName = `Heading${level}`;
+  return Heading;
 }
+
+
 
 let components = {
   h1: createHeading(1),
