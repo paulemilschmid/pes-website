@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   },
   description: 'this is portfolio.',
   openGraph: {
-    title: 'portfolio',
+    title: 'paul emil schmid',
     description: 'this is portfolio.',
     url: baseUrl,
-    siteName: 'portfolio',
+    siteName: 'paul emil schmid',
     locale: 'en_US',
     type: 'website',
   },
