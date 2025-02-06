@@ -32,7 +32,10 @@ export const WORK_EXPERIENCE: WorkExpItem[] = [
     location: "Munich, Germany",
     startDate: "12/2019",
     endDate: "07/2023",
-    description: [],
+    description: [
+      "Collaborated in developing custom risk assessment methodologies to identify potential avalanche hazards and evaluate decision-making processes.",
+      "Collected data, verified quality, and analyzed it using Python."
+    ],
   },
   {
     title: "Student Research Assistant",

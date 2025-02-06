@@ -31,7 +31,9 @@ export const EDU_EXPERIENCE: WorkExpItem[] = [
     location: "",
     startDate: "10/2021",
     endDate: "03/2024",
-    description: [],
+    description: [
+      "Fields of Study: Environmental Hazards and Risk, Remote Sensing"
+    ],
   },
   {
     title: "Exchange",
