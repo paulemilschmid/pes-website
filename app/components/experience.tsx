@@ -7,16 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import { LogoImage } from "./logo"; 
 
 export default function Experience() {
-  // Separate state for work and education accordions
+  
   const [openWorkIndex, setOpenWorkIndex] = useState<number | null>(null);
   const [openEduIndex, setOpenEduIndex] = useState<number | null>(null);
 
-  // Toggle the open state for a work experience item
   const toggleWorkItem = (idx: number) => {
     setOpenWorkIndex((prevIndex) => (prevIndex === idx ? null : idx));
   };
 
-  // Toggle the open state for an education item
   const toggleEduItem = (idx: number) => {
     setOpenEduIndex((prevIndex) => (prevIndex === idx ? null : idx));
   };
@@ -96,7 +94,7 @@ export default function Experience() {
       })}
 
       {/* Spacer for vertical space between sections */}
-      <div className="my-8" />
+      <div className="h-10" />
 
       {/* Education Experience Section */}
       <h1 className="font-semibold text-2xl mb-8 tracking-tighter">education</h1>

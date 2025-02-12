@@ -38,6 +38,16 @@ export const WORK_EXPERIENCE: WorkExpItem[] = [
     ],
   },
   {
+    title: "Sales for Outdoor, Climbing, Ski Equipment",
+    company: "Freiluftwerk",
+    imgPath: "/logos/fw.webp",
+    invert: true,
+    location: "Freising, Germany",
+    startDate: "10/2019",
+    endDate: "05/2023",
+    description: [],
+  },
+  {
     title: "Student Research Assistant",
     company: "TU Munich",
     imgPath: "/logos/tum.png",
@@ -45,6 +55,16 @@ export const WORK_EXPERIENCE: WorkExpItem[] = [
     location: "Munich, Germany",
     startDate: "01/2020",
     endDate: "10/2022",
+    description: [],
+  },
+  {
+    title: "Carpenter Summer Job",
+    company: "Zimmerei Kindler",
+    imgPath: "",
+    invert: false,
+    location: "",
+    startDate: "07/2014",
+    endDate: "09/2021",
     description: [],
   },
   {

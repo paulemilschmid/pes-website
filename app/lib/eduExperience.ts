@@ -11,7 +11,7 @@ export type WorkExpItem = {
 
 export const EDU_EXPERIENCE: WorkExpItem[] = [
   {
-    title: "M.Sc. Environmental Engineering",
+    title: "Exchange",
     institution: "ETH Zurich",
     imgPath: "/logos/eth.png",
     invert: true,
@@ -19,6 +19,7 @@ export const EDU_EXPERIENCE: WorkExpItem[] = [
     startDate: "10/2023",
     endDate: "03/2024",
     description: [
+      "Project Mobility Student for Master's Thesis",
       "Thesis: AI-based Debris Flow Feature Detection in Hillshade Images Derived from a High-Framerate LiDAR Scanner.",
       "ERASMUS+ Internship Grant"
     ],
@@ -32,7 +33,7 @@ export const EDU_EXPERIENCE: WorkExpItem[] = [
     startDate: "10/2021",
     endDate: "03/2024",
     description: [
-      "Fields of Study: Environmental Hazards and Risk, Remote Sensing"
+      "Specialization: Environmental Hazards and Risk, Remote Sensing, Hydraulic Engineering"
     ],
   },
   {
@@ -53,6 +54,16 @@ export const EDU_EXPERIENCE: WorkExpItem[] = [
     location: "",
     startDate: "05/2022",
     endDate: "07/2022",
+    description: [],
+  },
+  {
+    title: "Social Entrepreneurship Program",
+    institution: "Strascheg Center of Entrepreneurship",
+    imgPath: "",
+    invert: false,
+    location: "",
+    startDate: "09/2019",
+    endDate: "03/2020",
     description: [],
   },
   {
