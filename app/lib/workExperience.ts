@@ -20,7 +20,7 @@ export const WORK_EXPERIENCE: WorkExpItem[] = [
     endDate: "11/2024",
     description: [
       "Implemented deep learning object detection algorithms for image analysis from high-frame-rate point clouds using Python.",
-      "Developed data processing pipeline for 3D data and executed them on a GPU cluster.",
+      "Developed data processing pipelines for 3D data and executed them on a GPU cluster.",
       "Installed and managed remote monitoring systems."
     ],
   },
