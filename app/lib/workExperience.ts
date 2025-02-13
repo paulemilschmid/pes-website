@@ -70,7 +70,7 @@ export const WORK_EXPERIENCE: WorkExpItem[] = [
   {
     title: "Working Student",
     company: "German Alpine Association",
-    imgPath: "/logos/eth.png",
+    imgPath: "",
     invert: false,
     location: "Munich, Germany",
     startDate: "04/2019",
